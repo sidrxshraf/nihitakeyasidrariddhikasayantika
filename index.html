@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>for the four ♡</title>
+<title>Sidra's little world ♡</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -36,11 +35,8 @@ body {
 }
 
 button, input { font: inherit; }
-
 button { cursor: pointer; }
-
 a { color: inherit; text-decoration: none; }
-
 ::selection { background: #f3d6e1; }
 
 .grain {
@@ -150,7 +146,7 @@ nav a:hover { color: #c47e9a; }
 
 .section-heading h2 {
   font-family: var(--script);
-  font-size: clamp(48px, 8vw, 78px);
+  font-size: clamp(45px, 8vw, 75px);
   font-weight: 400;
   margin: 8px 0;
   color: #a8758a;
@@ -543,6 +539,7 @@ footer p {
 
 <nav>
   <a href="#beginning">beginning</a>
+  <a href="#friends">the cast</a>
   <a href="#letters">letters</a>
   <a href="#quiz">the exam</a>
   <a href="#games">play</a>
@@ -557,15 +554,15 @@ footer p {
   <span class="hero-star" style="bottom:22%;left:25%;animation-delay:2s">✳</span>
 
   <div class="tiny-label">a little something for you four</div>
-  <h1 class="hero-script">for the four ♡</h1>
-  <p class="hero-sub">five months, approximately a million incidents, and four people who made the beginning rather lovely.</p>
+  <h1 class="hero-script">Sidra's little world ♡</h1>
+  <p class="hero-sub">a little corner of the internet for four people who made my first five months rather lovely.</p>
   <div class="hero-note">made with an unreasonable amount of affection</div>
 </header>
 
-<section class="section reveal">
+<section class="section reveal" id="friends">
   <div class="section-heading">
     <small>the people in question</small>
-    <h2>the little cast</h2>
+    <h2>Sidra's little cast</h2>
     <p>four different personalities. one shared brain cell.</p>
   </div>
 
@@ -580,7 +577,7 @@ footer p {
 <section class="section reveal" id="letters">
   <div class="section-heading">
     <small>open when you feel like it</small>
-    <h2>little letters</h2>
+    <h2>Sidra's little letters</h2>
     <p>one for each of you. no peeking at someone else's.</p>
   </div>
   <div class="letters-grid" id="letters-grid"></div>
@@ -589,7 +586,7 @@ footer p {
 <section class="section reveal" id="quiz">
   <div class="section-heading">
     <small>an academically questionable assessment</small>
-    <h2>the lore examination</h2>
+    <h2>Sidra's lore examination</h2>
     <p>you were there. surely you remember.</p>
   </div>
 
@@ -607,7 +604,7 @@ footer p {
 <section class="section reveal" id="games">
   <div class="section-heading">
     <small>important matters</small>
-    <h2>the fun department</h2>
+    <h2>Sidra's fun department</h2>
     <p>absolutely no academic value whatsoever.</p>
   </div>
 
@@ -650,7 +647,7 @@ footer p {
 <section class="section reveal" id="bingo">
   <div class="section-heading">
     <small>five months of questionable decisions</small>
-    <h2>friendship bingo</h2>
+    <h2>Sidra's friendship bingo</h2>
     <p>tap each square if it has happened. no lying.</p>
   </div>
   <div class="bingo" id="bingo-board"></div>
@@ -663,7 +660,7 @@ footer p {
 <section class="section reveal" id="awards">
   <div class="section-heading">
     <small>the academy recognises excellence</small>
-    <h2>the friendship awards</h2>
+    <h2>Sidra's friendship awards</h2>
     <p>the results are final. probably.</p>
   </div>
   <div class="awards-grid" id="awards-grid"></div>
@@ -672,7 +669,7 @@ footer p {
 <section class="section reveal" id="capsule">
   <div class="section-heading">
     <small>for the people we'll be later</small>
-    <h2>the time capsule</h2>
+    <h2>Sidra's time capsule</h2>
     <p>leave a message for the end of the academic year.</p>
   </div>
   <div class="capsule">
@@ -686,41 +683,45 @@ footer p {
 </section>
 
 <footer>
-  <div class="script">to be continued...</div>
+  <div class="script">with love, Sidra ♡</div>
   <p>five months down. so much more nonsense to go.</p>
   <div style="font-size:18px;margin-top:20px">♡ ✧ ♡</div>
 </footer>
 
 <script>
-/* ==================================================
-   PERSONALISE YOUR WEBSITE HERE
-   Replace the sample names, messages and memories.
-================================================== */
+/* ==============================================
+   PERSONAL DETAILS
+   Edit letters, memories and questions here.
+============================================== */
 
 const friends = [
   {
-    name: "Friend One",
-    colour: "black",
-    label: "the first black section",
-    letter: "Dear Friend One,\n\n[Write your personal letter here. Mention a memory, something you appreciate, and one thing that makes them unmistakably them.]\n\nWith love, me ♡"
-  },
-  {
-    name: "Friend Two",
-    colour: "pink",
-    label: "the pink section",
-    letter: "Dear Friend Two,\n\n[Write your personal letter here. Add your favourite inside joke or a moment you shared.]\n\nWith love, me ♡"
-  },
-  {
-    name: "Friend Three",
+    name: "Nihita",
+    birthday: "29.10.06",
     colour: "blush",
     label: "the blush section",
-    letter: "Dear Friend Three,\n\n[Write your personal letter here. Make it personal, specific and a little silly.]\n\nWith love, me ♡"
+    letter: "Dear Nihita,\n\n[Write your personal letter here. Mention a memory, something you appreciate, and one thing that makes you unmistakably you.]\n\nWith love, Sidra ♡"
   },
   {
-    name: "Friend Four",
-    colour: "black",
-    label: "the other black section",
-    letter: "Dear Friend Four,\n\n[Write your personal letter here. Tell them what you hope the next few months bring.]\n\nWith love, me ♡"
+    name: "Riddhika",
+    birthday: "17.07.08",
+    colour: "pink",
+    label: "the pink section",
+    letter: "Dear Riddhika,\n\n[Write your personal letter here. Add your favourite inside joke or a moment you shared.]\n\nWith love, Sidra ♡"
+  },
+  {
+    name: "Keya",
+    birthday: "10.01.08",
+    colour: "blush",
+    label: "the blush section",
+    letter: "Dear Keya,\n\n[Write your personal letter here. Make it personal, specific and a little silly.]\n\nWith love, Sidra ♡"
+  },
+  {
+    name: "Sayantika",
+    birthday: "07.01.08",
+    colour: "blush",
+    label: "the other blush section",
+    letter: "Dear Sayantika,\n\n[Write your personal letter here. Tell them what you hope the next few months bring.]\n\nWith love, Sidra ♡"
   }
 ];
 
@@ -733,7 +734,7 @@ const quizQuestions = [
   },
   {
     question: "Who is most likely to start laughing at the worst possible moment?",
-    options: ["Friend One", "Friend Two", "Friend Three", "Friend Four"],
+    options: ["Nihita", "Riddhika", "Keya", "Sayantika"],
     answer: 1,
     feedback: "A very important piece of evidence."
   },
@@ -801,17 +802,17 @@ const bingoItems = [
 ];
 
 const awards = [
-  ["CEO of Chaos", "Friend One"],
-  ["Most Likely to Disappear", "Friend Two"],
-  ["Professional Comedian", "Friend Three"],
-  ["Main Character Energy", "Friend Four"],
+  ["CEO of Chaos", "Nihita"],
+  ["Most Likely to Disappear", "Riddhika"],
+  ["Professional Comedian", "Keya"],
+  ["Main Character Energy", "Sayantika"],
   ["The Group's Survival Instinct", "All five of us"],
-  ["Most Likely to Say 'I'm Serious'", "Friend One"]
+  ["Most Likely to Say 'I'm Serious'", "Sidra"]
 ];
 
-/* ==================================================
-   WEBSITE INTERACTIONS
-================================================== */
+/* ==============================================
+   FRIEND CARDS AND LETTERS
+============================================== */
 
 const friendsGrid = document.getElementById("friends-grid");
 const lettersGrid = document.getElementById("letters-grid");
@@ -820,7 +821,7 @@ friends.forEach((friend, index) => {
   const card = document.createElement("div");
   card.className = `friend ${friend.colour}`;
   card.innerHTML = `
-    <div class="number">0${index+1}</div>
+    <div class="number">${friend.birthday}</div>
     <h3>${friend.name}</h3>
     <p>${friend.label}</p>
   `;
@@ -844,7 +845,9 @@ function toggleLetter(index) {
   box.textContent = isOpen ? friends[index].letter : "";
 }
 
-/* QUIZ */
+/* ==============================================
+   QUIZ
+============================================== */
 
 let currentQuestion = 0;
 let score = 0;
@@ -860,10 +863,13 @@ function startQuiz() {
 function showQuestion() {
   answered = false;
   const q = quizQuestions[currentQuestion];
+
   document.getElementById("quiz-count").textContent =
     `question ${String(currentQuestion+1).padStart(2,"0")} / ${quizQuestions.length}`;
+
   document.getElementById("quiz-bar").style.width =
     `${(currentQuestion / quizQuestions.length) * 100}%`;
+
   document.getElementById("quiz-question").textContent = q.question;
   document.getElementById("quiz-feedback").textContent = "";
   document.getElementById("quiz-next").style.display = "none";
@@ -881,6 +887,7 @@ function showQuestion() {
 
 function selectAnswer(index, button) {
   if (answered) return;
+
   answered = true;
   const q = quizQuestions[currentQuestion];
   const buttons = document.querySelectorAll("#quiz-options button");
@@ -890,7 +897,8 @@ function selectAnswer(index, button) {
   if (index === q.answer) {
     score++;
     button.classList.add("correct");
-    document.getElementById("quiz-feedback").textContent = "Correct. You have been paying attention ♡";
+    document.getElementById("quiz-feedback").textContent =
+      "Correct. You have been paying attention ♡";
   } else {
     button.classList.add("wrong");
     buttons[q.answer].classList.add("correct");
@@ -899,19 +907,27 @@ function selectAnswer(index, button) {
 
   document.getElementById("quiz-next").style.display = "inline-block";
   document.getElementById("quiz-next").textContent =
-    currentQuestion === quizQuestions.length - 1 ? "see my results ♡" : "next question →";
+    currentQuestion === quizQuestions.length - 1
+      ? "see my results ♡"
+      : "next question →";
 }
 
 function nextQuestion() {
   currentQuestion++;
+
   if (currentQuestion >= quizQuestions.length) {
     document.getElementById("quiz-question").textContent =
       `You scored ${score} / ${quizQuestions.length}`;
+
     document.getElementById("quiz-options").innerHTML = "";
+
     document.getElementById("quiz-feedback").textContent =
-      score === 5 ? "A certified group historian. We respect you." :
-      score >= 3 ? "Not bad. Your memory is functioning." :
-      "Were you even there? We need to talk.";
+      score === 5
+        ? "A certified group historian. We respect you."
+        : score >= 3
+          ? "Not bad. Your memory is functioning."
+          : "Were you even there? We need to talk.";
+
     document.getElementById("quiz-next").style.display = "none";
     document.getElementById("quiz-start").style.display = "inline-block";
     document.getElementById("quiz-start").textContent = "retake the examination";
@@ -921,46 +937,51 @@ function nextQuestion() {
   }
 }
 
-/* FORTUNE */
+/* ==============================================
+   FORTUNE AND WHEEL
+============================================== */
 
 function fortune() {
   const result = fortunes[Math.floor(Math.random() * fortunes.length)];
   document.getElementById("fortune-result").textContent = result;
 }
 
-/* WHEEL */
-
 let rotation = 0;
 
 function spinWheel() {
   rotation += 1440 + Math.floor(Math.random() * 360);
   document.getElementById("wheel").style.transform = `rotate(${rotation}deg)`;
+
   const result = wheelPrompts[Math.floor(Math.random() * wheelPrompts.length)];
   document.getElementById("wheel-result").textContent = result;
 }
 
-/* MEMORY MACHINE */
+/* ==============================================
+   MEMORY MACHINE AND WHO WAS IT
+============================================== */
 
 function randomMemory() {
   const result = memories[Math.floor(Math.random() * memories.length)];
   document.getElementById("memory-result").textContent = result;
 }
 
-/* WHO WAS IT */
-
 function whoWasIt() {
   const person = friends[Math.floor(Math.random() * friends.length)].name;
+
   const options = [
     `${person}. We all know it was them.`,
     `The evidence points towards ${person}.`,
     `${person} has been named in the investigation.`,
     `No further questions. It was ${person}.`
   ];
+
   document.getElementById("who-result").textContent =
     options[Math.floor(Math.random() * options.length)];
 }
 
-/* BINGO */
+/* ==============================================
+   FRIENDSHIP BINGO
+============================================== */
 
 const bingoBoard = document.getElementById("bingo-board");
 let marked = new Set();
@@ -969,6 +990,7 @@ bingoItems.forEach((item, index) => {
   const cell = document.createElement("button");
   cell.className = "bingo-cell";
   cell.textContent = item;
+
   cell.onclick = () => {
     if (marked.has(index)) {
       marked.delete(index);
@@ -977,25 +999,32 @@ bingoItems.forEach((item, index) => {
       marked.add(index);
       cell.classList.add("marked");
     }
+
     document.getElementById("bingo-count").textContent =
       `${marked.size} / 9 completed`;
+
     if (marked.size === 9) {
       document.getElementById("bingo-count").textContent =
         "BINGO. You people need supervision. ♡";
     }
   };
+
   bingoBoard.appendChild(cell);
 });
 
 function resetBingo() {
   marked.clear();
+
   document.querySelectorAll(".bingo-cell").forEach(cell => {
     cell.classList.remove("marked");
   });
+
   document.getElementById("bingo-count").textContent = "0 / 9 completed";
 }
 
-/* AWARDS */
+/* ==============================================
+   FRIENDSHIP AWARDS
+============================================== */
 
 const awardsGrid = document.getElementById("awards-grid");
 
@@ -1006,30 +1035,38 @@ awards.forEach(([award, winner]) => {
   awardsGrid.appendChild(item);
 });
 
-/* TIME CAPSULE */
+/* ==============================================
+   TIME CAPSULE
+============================================== */
 
 function saveCapsule() {
   const message = document.getElementById("capsule-message").value.trim();
+  const status = document.getElementById("capsule-status");
+
   if (!message) {
-    document.getElementById("capsule-status").textContent =
-      "You need to write something first, darling.";
+    status.textContent = "You need to write something first.";
     return;
   }
+
   try {
     localStorage.setItem("friendshipTimeCapsule", message);
-    document.getElementById("capsule-status").textContent =
+    status.textContent =
       "Sealed. Your future selves have a letter waiting. ♡";
   } catch {
-    document.getElementById("capsule-status").textContent =
+    status.textContent =
       "Your browser couldn't save this message. Copy it somewhere safe!";
   }
 }
 
-/* REVEAL ON SCROLL */
+/* ==============================================
+   SCROLL ANIMATIONS
+============================================== */
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("visible");
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
   });
 }, { threshold: .1 });
 
@@ -1038,3 +1075,4 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
+
