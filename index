@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for the four ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #fffdfd;
+  --ink: #292329;
+  --pink: #e8a8bd;
+  --blush: #f5dce5;
+  --muted: #9b8790;
+  --line: #eadfe3;
+  --serif: 'Cormorant Garamond', serif;
+  --script: 'Great Vibes', cursive;
+  --sans: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+button, input { font: inherit; }
+
+button { cursor: pointer; }
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: #f3d6e1; }
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 17px 12px;
+  background: rgba(255,253,253,.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+nav a {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #806d76;
+  transition: .25s;
+}
+
+nav a:hover { color: #c47e9a; }
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.tiny-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #b18a9a;
+}
+
+.hero-script {
+  font-family: var(--script);
+  font-size: clamp(65px, 13vw, 145px);
+  font-weight: 400;
+  color: #b87f96;
+  line-height: 1.1;
+  margin: 22px 0 8px;
+}
+
+.hero-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  color: #897780;
+  max-width: 460px;
+  line-height: 1.5;
+}
+
+.hero-note {
+  margin-top: 55px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #b59da7;
+  text-transform: uppercase;
+}
+
+.hero-star {
+  position: absolute;
+  color: #d9a7b9;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px) rotate(12deg); }
+}
+
+.section {
+  max-width: 1050px;
+  margin: auto;
+  padding: 95px 25px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-heading small {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 9px;
+  color: #b18a9a;
+}
+
+.section-heading h2 {
+  font-family: var(--script);
+  font-size: clamp(48px, 8vw, 78px);
+  font-weight: 400;
+  margin: 8px 0;
+  color: #a8758a;
+}
+
+.section-heading p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  color: #95828b;
+}
+
+.divider {
+  width: 65px;
+  height: 1px;
+  background: #e4c5d1;
+  margin: 22px auto;
+}
+
+.intro-text {
+  max-width: 570px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1.7;
+  color: #75636c;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.friend {
+  padding: 30px 14px;
+  text-align: center;
+  border: 1px solid var(--line);
+  background: white;
+  transition: .3s;
+}
+
+.friend:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 35px #d8b8c51c;
+}
+
+.friend .number {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: #b89aa7;
+}
+
+.friend h3 {
+  font-family: var(--script);
+  font-size: 35px;
+  font-weight: 400;
+  margin: 13px 0;
+}
+
+.friend p {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a38d97;
+}
+
+.friend.black h3 { color: #373139; }
+.friend.pink h3 { color: #dc8fac; }
+.friend.blush h3 { color: #c58c9e; }
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 22px;
+}
+
+.letter {
+  padding: 30px;
+  background: #fff9fb;
+  border: 1px solid #eedee5;
+  text-align: center;
+  min-height: 210px;
+}
+
+.letter .envelope {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.letter h3 {
+  font-family: var(--script);
+  font-size: 34px;
+  font-weight: 400;
+  margin: 5px;
+}
+
+.letter p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: #8d7882;
+}
+
+.soft-button {
+  border: 1px solid #dfb9c8;
+  color: #a36f85;
+  background: #fff;
+  padding: 12px 22px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.soft-button:hover {
+  background: #f7e7ed;
+  transform: translateY(-2px);
+}
+
+.letter-content {
+  display: none;
+  max-width: 550px;
+  margin: 25px auto 0;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.7;
+  color: #78616d;
+  white-space: pre-line;
+}
+
+.letter-content.show { display: block; }
+
+.quiz-box {
+  max-width: 680px;
+  margin: auto;
+  border: 1px solid #ead6df;
+  padding: 35px;
+  background: #fffafb;
+  text-align: center;
+}
+
+.quiz-progress {
+  height: 3px;
+  background: #f0e2e8;
+  margin: 20px 0 35px;
+}
+
+.quiz-progress div {
+  height: 100%;
+  width: 0%;
+  background: #cf91a9;
+  transition: .3s;
+}
+
+.quiz-question {
+  font-family: var(--serif);
+  font-size: 29px;
+  margin: 15px 0 25px;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.quiz-options button {
+  padding: 15px;
+  border: 1px solid #ead9e0;
+  background: white;
+  color: #806b75;
+  transition: .2s;
+  font-size: 12px;
+}
+
+.quiz-options button:hover {
+  background: #f8e8ee;
+  border-color: #d9a7b9;
+}
+
+.quiz-options button.correct { background: #e8f1e8; }
+.quiz-options button.wrong { background: #f8e6e9; }
+
+#quiz-feedback {
+  min-height: 35px;
+  margin: 20px 0;
+  font-family: var(--serif);
+  font-style: italic;
+  color: #aa7890;
+  font-size: 18px;
+}
+
+#quiz-next { display: none; }
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.game-card {
+  border: 1px solid var(--line);
+  padding: 30px;
+  background: white;
+  text-align: center;
+}
+
+.game-card h3 {
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 400;
+  margin: 5px 0 10px;
+}
+
+.game-card p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: #9a8490;
+  min-height: 48px;
+  line-height: 1.5;
+}
+
+.game-result {
+  font-family: var(--serif);
+  font-size: 21px;
+  color: #b77f96;
+  min-height: 60px;
+  margin: 15px 0;
+}
+
+.wheel {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 4px solid white;
+  outline: 1px solid #e6cbd6;
+  margin: 20px auto;
+  background: conic-gradient(#f4dce5 0 25%,#fff 25% 50%,#e9c1d0 50% 75%,#f8eaf0 75%);
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  transition: transform 2s cubic-bezier(.15,.8,.2,1);
+}
+
+.bingo {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 7px;
+  max-width: 480px;
+  margin: 25px auto;
+}
+
+.bingo-cell {
+  aspect-ratio: 1;
+  border: 1px solid #ead8e0;
+  background: #fffafb;
+  padding: 8px;
+  font-family: var(--serif);
+  font-size: 14px;
+  color: #826c77;
+  transition: .2s;
+}
+
+.bingo-cell.marked {
+  background: #f0d5df;
+  text-decoration: line-through;
+  color: #8d596f;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+
+.award {
+  padding: 20px;
+  border: 1px solid #ead9e0;
+  background: #fffafb;
+  text-align: center;
+}
+
+.award strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.award span {
+  color: #b17d93;
+  font-size: 13px;
+}
+
+.memory-paper {
+  max-width: 600px;
+  min-height: 160px;
+  margin: 25px auto;
+  padding: 35px;
+  background: #fff9fb;
+  border: 1px dashed #dfbdca;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 25px;
+  font-style: italic;
+  color: #8f6d7c;
+}
+
+.capsule {
+  max-width: 650px;
+  margin: auto;
+  padding: 40px 25px;
+  text-align: center;
+  background: #fff9fb;
+  border: 1px solid #ead9e0;
+}
+
+.capsule textarea {
+  width: 100%;
+  min-height: 130px;
+  resize: vertical;
+  padding: 15px;
+  border: 1px solid #ead9e0;
+  background: white;
+  font-family: var(--serif);
+  font-size: 18px;
+  color: #79636e;
+  outline: none;
+}
+
+.capsule textarea:focus { border-color: #d49aaf; }
+
+.capsule-status {
+  font-family: var(--serif);
+  font-style: italic;
+  color: #b17d93;
+  margin-top: 15px;
+}
+
+footer {
+  padding: 80px 20px;
+  text-align: center;
+  color: #ad8b9a;
+}
+
+footer .script {
+  font-family: var(--script);
+  font-size: 55px;
+  color: #b77e95;
+}
+
+footer p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .8s, transform .8s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width:650px) {
+  nav { gap: 13px; }
+  nav a { font-size: 8px; letter-spacing: 1px; }
+  .friends-grid { grid-template-columns: repeat(2,1fr); }
+  .letters-grid, .game-grid, .awards-grid { grid-template-columns: 1fr; }
+  .quiz-box { padding: 22px 15px; }
+  .quiz-options { grid-template-columns: 1fr; }
+  .section { padding: 70px 18px; }
+}
+</style>
+</head>
+
+<body>
+<div class="grain"></div>
+
+<nav>
+  <a href="#beginning">beginning</a>
+  <a href="#letters">letters</a>
+  <a href="#quiz">the exam</a>
+  <a href="#games">play</a>
+  <a href="#bingo">bingo</a>
+  <a href="#awards">awards</a>
+  <a href="#capsule">time capsule</a>
+</nav>
+
+<header class="hero" id="beginning">
+  <span class="hero-star" style="top:20%;left:18%">✧</span>
+  <span class="hero-star" style="top:30%;right:18%;animation-delay:1s">♡</span>
+  <span class="hero-star" style="bottom:22%;left:25%;animation-delay:2s">✳</span>
+
+  <div class="tiny-label">a little something for you four</div>
+  <h1 class="hero-script">for the four ♡</h1>
+  <p class="hero-sub">five months, approximately a million incidents, and four people who made the beginning rather lovely.</p>
+  <div class="hero-note">made with an unreasonable amount of affection</div>
+</header>
+
+<section class="section reveal">
+  <div class="section-heading">
+    <small>the people in question</small>
+    <h2>the little cast</h2>
+    <p>four different personalities. one shared brain cell.</p>
+  </div>
+
+  <div class="friends-grid" id="friends-grid"></div>
+  <div class="divider"></div>
+  <p class="intro-text">
+    Five months isn't a lifetime. But somehow, between lectures, conversations,
+    unexpected chaos and all the little things in between, you became part of my favourite college memories.
+  </p>
+</section>
+
+<section class="section reveal" id="letters">
+  <div class="section-heading">
+    <small>open when you feel like it</small>
+    <h2>little letters</h2>
+    <p>one for each of you. no peeking at someone else's.</p>
+  </div>
+  <div class="letters-grid" id="letters-grid"></div>
+</section>
+
+<section class="section reveal" id="quiz">
+  <div class="section-heading">
+    <small>an academically questionable assessment</small>
+    <h2>the lore examination</h2>
+    <p>you were there. surely you remember.</p>
+  </div>
+
+  <div class="quiz-box">
+    <div class="tiny-label" id="quiz-count">question 01 / 05</div>
+    <div class="quiz-progress"><div id="quiz-bar"></div></div>
+    <div class="quiz-question" id="quiz-question">Ready to test your memory?</div>
+    <div class="quiz-options" id="quiz-options"></div>
+    <div id="quiz-feedback"></div>
+    <button class="soft-button" id="quiz-next" onclick="nextQuestion()">next question →</button>
+    <button class="soft-button" id="quiz-start" onclick="startQuiz()">begin examination ♡</button>
+  </div>
+</section>
+
+<section class="section reveal" id="games">
+  <div class="section-heading">
+    <small>important matters</small>
+    <h2>the fun department</h2>
+    <p>absolutely no academic value whatsoever.</p>
+  </div>
+
+  <div class="game-grid">
+    <div class="game-card">
+      <div class="tiny-label">01 · destiny</div>
+      <h3>friendship fortune</h3>
+      <p>let the universe decide your next college incident.</p>
+      <div class="game-result" id="fortune-result">✧ your fortune awaits ✧</div>
+      <button class="soft-button" onclick="fortune()">reveal my fate</button>
+    </div>
+
+    <div class="game-card">
+      <div class="tiny-label">02 · chance</div>
+      <h3>spin the wheel</h3>
+      <p>whatever it lands on, you have to answer.</p>
+      <div class="wheel" id="wheel">♡</div>
+      <div class="game-result" id="wheel-result">the wheel knows.</div>
+      <button class="soft-button" onclick="spinWheel()">spin it</button>
+    </div>
+
+    <div class="game-card">
+      <div class="tiny-label">03 · nostalgia</div>
+      <h3>the memory machine</h3>
+      <p>one random memory from the archives.</p>
+      <div class="game-result" id="memory-result">press the button. be prepared.</div>
+      <button class="soft-button" onclick="randomMemory()">take me back</button>
+    </div>
+
+    <div class="game-card">
+      <div class="tiny-label">04 · investigation</div>
+      <h3>who was it?</h3>
+      <p>identify the individual responsible for the incident.</p>
+      <div class="game-result" id="who-result">a mystery awaits...</div>
+      <button class="soft-button" onclick="whoWasIt()">reveal culprit</button>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="bingo">
+  <div class="section-heading">
+    <small>five months of questionable decisions</small>
+    <h2>friendship bingo</h2>
+    <p>tap each square if it has happened. no lying.</p>
+  </div>
+  <div class="bingo" id="bingo-board"></div>
+  <p style="text-align:center;font-family:var(--serif);font-style:italic;color:#a47c8d" id="bingo-count">0 / 9 completed</p>
+  <div style="text-align:center;margin-top:20px">
+    <button class="soft-button" onclick="resetBingo()">reset the evidence</button>
+  </div>
+</section>
+
+<section class="section reveal" id="awards">
+  <div class="section-heading">
+    <small>the academy recognises excellence</small>
+    <h2>the friendship awards</h2>
+    <p>the results are final. probably.</p>
+  </div>
+  <div class="awards-grid" id="awards-grid"></div>
+</section>
+
+<section class="section reveal" id="capsule">
+  <div class="section-heading">
+    <small>for the people we'll be later</small>
+    <h2>the time capsule</h2>
+    <p>leave a message for the end of the academic year.</p>
+  </div>
+  <div class="capsule">
+    <div class="tiny-label">a message to our future selves</div>
+    <p style="font-family:var(--serif);font-size:22px;color:#947986">What do you hope we remember?</p>
+    <textarea id="capsule-message" placeholder="dear future us..."></textarea>
+    <br><br>
+    <button class="soft-button" onclick="saveCapsule()">seal this letter ♡</button>
+    <div class="capsule-status" id="capsule-status"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="script">to be continued...</div>
+  <p>five months down. so much more nonsense to go.</p>
+  <div style="font-size:18px;margin-top:20px">♡ ✧ ♡</div>
+</footer>
+
+<script>
+/* ==================================================
+   PERSONALISE YOUR WEBSITE HERE
+   Replace the sample names, messages and memories.
+================================================== */
+
+const friends = [
+  {
+    name: "Friend One",
+    colour: "black",
+    label: "the first black section",
+    letter: "Dear Friend One,\n\n[Write your personal letter here. Mention a memory, something you appreciate, and one thing that makes them unmistakably them.]\n\nWith love, me ♡"
+  },
+  {
+    name: "Friend Two",
+    colour: "pink",
+    label: "the pink section",
+    letter: "Dear Friend Two,\n\n[Write your personal letter here. Add your favourite inside joke or a moment you shared.]\n\nWith love, me ♡"
+  },
+  {
+    name: "Friend Three",
+    colour: "blush",
+    label: "the blush section",
+    letter: "Dear Friend Three,\n\n[Write your personal letter here. Make it personal, specific and a little silly.]\n\nWith love, me ♡"
+  },
+  {
+    name: "Friend Four",
+    colour: "black",
+    label: "the other black section",
+    letter: "Dear Friend Four,\n\n[Write your personal letter here. Tell them what you hope the next few months bring.]\n\nWith love, me ♡"
+  }
+];
+
+const quizQuestions = [
+  {
+    question: "What was our first major group incident?",
+    options: ["Replace this option", "Replace this option", "Replace this option", "Replace this option"],
+    answer: 0,
+    feedback: "How could you possibly forget?"
+  },
+  {
+    question: "Who is most likely to start laughing at the worst possible moment?",
+    options: ["Friend One", "Friend Two", "Friend Three", "Friend Four"],
+    answer: 1,
+    feedback: "A very important piece of evidence."
+  },
+  {
+    question: "What is our unofficial group activity?",
+    options: ["Studying", "Being productive", "Talking nonsense", "All of the above"],
+    answer: 2,
+    feedback: "We all know the answer."
+  },
+  {
+    question: "Which event deserves its own documentary?",
+    options: ["The incident", "The other incident", "That one day", "All of them"],
+    answer: 3,
+    feedback: "Netflix, call us."
+  },
+  {
+    question: "How many brain cells do we collectively possess?",
+    options: ["Four", "Two", "One", "Currently under investigation"],
+    answer: 2,
+    feedback: "And yet somehow we survive."
+  }
+];
+
+const fortunes = [
+  "A lecture will be attended. Attention will not be paid.",
+  "You will laugh at something that isn't even remotely funny.",
+  "An unnecessary adventure is approaching.",
+  "A new inside joke will be born. Nobody will understand it.",
+  "You will say 'let's be productive' and immediately do the opposite.",
+  "Someone will have an unnecessarily dramatic announcement.",
+  "Your next iconic memory is closer than you think.",
+  "The group chat will be active at an unreasonable hour."
+];
+
+const wheelPrompts = [
+  "Tell us your most embarrassing college moment.",
+  "Who would survive a zombie apocalypse?",
+  "Reveal your most controversial group opinion.",
+  "Describe the group in exactly three words.",
+  "What is one memory you would relive?",
+  "Who is most likely to become famous?",
+  "Tell us something nobody here knows.",
+  "Imitate someone in the group. No names."
+];
+
+const memories = [
+  "That one day when absolutely nothing went according to plan.",
+  "The conversation that somehow lasted an entire lecture.",
+  "The moment we realised we were becoming an actual group.",
+  "A completely ordinary day that became a core memory.",
+  "That incident. We do not need to elaborate.",
+  "The laughter that made absolutely no sense to anyone else."
+];
+
+const bingoItems = [
+  "Skipped a lecture",
+  "Laughed at the wrong time",
+  "Shared food",
+  "Had a dramatic discussion",
+  "Made an inside joke",
+  "Got distracted together",
+  "Said 'one last thing'",
+  "Experienced campus chaos",
+  "Made a core memory"
+];
+
+const awards = [
+  ["CEO of Chaos", "Friend One"],
+  ["Most Likely to Disappear", "Friend Two"],
+  ["Professional Comedian", "Friend Three"],
+  ["Main Character Energy", "Friend Four"],
+  ["The Group's Survival Instinct", "All five of us"],
+  ["Most Likely to Say 'I'm Serious'", "Friend One"]
+];
+
+/* ==================================================
+   WEBSITE INTERACTIONS
+================================================== */
+
+const friendsGrid = document.getElementById("friends-grid");
+const lettersGrid = document.getElementById("letters-grid");
+
+friends.forEach((friend, index) => {
+  const card = document.createElement("div");
+  card.className = `friend ${friend.colour}`;
+  card.innerHTML = `
+    <div class="number">0${index+1}</div>
+    <h3>${friend.name}</h3>
+    <p>${friend.label}</p>
+  `;
+  friendsGrid.appendChild(card);
+
+  const letter = document.createElement("div");
+  letter.className = "letter";
+  letter.innerHTML = `
+    <div class="envelope">✉</div>
+    <h3>${friend.name}</h3>
+    <p>a little something, just for you.</p>
+    <button class="soft-button" onclick="toggleLetter(${index})">open letter</button>
+    <div class="letter-content" id="letter-${index}"></div>
+  `;
+  lettersGrid.appendChild(letter);
+});
+
+function toggleLetter(index) {
+  const box = document.getElementById(`letter-${index}`);
+  const isOpen = box.classList.toggle("show");
+  box.textContent = isOpen ? friends[index].letter : "";
+}
+
+/* QUIZ */
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+function startQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("quiz-start").style.display = "none";
+  showQuestion();
+}
+
+function showQuestion() {
+  answered = false;
+  const q = quizQuestions[currentQuestion];
+  document.getElementById("quiz-count").textContent =
+    `question ${String(currentQuestion+1).padStart(2,"0")} / ${quizQuestions.length}`;
+  document.getElementById("quiz-bar").style.width =
+    `${(currentQuestion / quizQuestions.length) * 100}%`;
+  document.getElementById("quiz-question").textContent = q.question;
+  document.getElementById("quiz-feedback").textContent = "";
+  document.getElementById("quiz-next").style.display = "none";
+
+  const options = document.getElementById("quiz-options");
+  options.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.textContent = option;
+    button.onclick = () => selectAnswer(index, button);
+    options.appendChild(button);
+  });
+}
+
+function selectAnswer(index, button) {
+  if (answered) return;
+  answered = true;
+  const q = quizQuestions[currentQuestion];
+  const buttons = document.querySelectorAll("#quiz-options button");
+
+  buttons.forEach(b => b.disabled = true);
+
+  if (index === q.answer) {
+    score++;
+    button.classList.add("correct");
+    document.getElementById("quiz-feedback").textContent = "Correct. You have been paying attention ♡";
+  } else {
+    button.classList.add("wrong");
+    buttons[q.answer].classList.add("correct");
+    document.getElementById("quiz-feedback").textContent = q.feedback;
+  }
+
+  document.getElementById("quiz-next").style.display = "inline-block";
+  document.getElementById("quiz-next").textContent =
+    currentQuestion === quizQuestions.length - 1 ? "see my results ♡" : "next question →";
+}
+
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion >= quizQuestions.length) {
+    document.getElementById("quiz-question").textContent =
+      `You scored ${score} / ${quizQuestions.length}`;
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").textContent =
+      score === 5 ? "A certified group historian. We respect you." :
+      score >= 3 ? "Not bad. Your memory is functioning." :
+      "Were you even there? We need to talk.";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("quiz-start").style.display = "inline-block";
+    document.getElementById("quiz-start").textContent = "retake the examination";
+    document.getElementById("quiz-bar").style.width = "100%";
+  } else {
+    showQuestion();
+  }
+}
+
+/* FORTUNE */
+
+function fortune() {
+  const result = fortunes[Math.floor(Math.random() * fortunes.length)];
+  document.getElementById("fortune-result").textContent = result;
+}
+
+/* WHEEL */
+
+let rotation = 0;
+
+function spinWheel() {
+  rotation += 1440 + Math.floor(Math.random() * 360);
+  document.getElementById("wheel").style.transform = `rotate(${rotation}deg)`;
+  const result = wheelPrompts[Math.floor(Math.random() * wheelPrompts.length)];
+  document.getElementById("wheel-result").textContent = result;
+}
+
+/* MEMORY MACHINE */
+
+function randomMemory() {
+  const result = memories[Math.floor(Math.random() * memories.length)];
+  document.getElementById("memory-result").textContent = result;
+}
+
+/* WHO WAS IT */
+
+function whoWasIt() {
+  const person = friends[Math.floor(Math.random() * friends.length)].name;
+  const options = [
+    `${person}. We all know it was them.`,
+    `The evidence points towards ${person}.`,
+    `${person} has been named in the investigation.`,
+    `No further questions. It was ${person}.`
+  ];
+  document.getElementById("who-result").textContent =
+    options[Math.floor(Math.random() * options.length)];
+}
+
+/* BINGO */
+
+const bingoBoard = document.getElementById("bingo-board");
+let marked = new Set();
+
+bingoItems.forEach((item, index) => {
+  const cell = document.createElement("button");
+  cell.className = "bingo-cell";
+  cell.textContent = item;
+  cell.onclick = () => {
+    if (marked.has(index)) {
+      marked.delete(index);
+      cell.classList.remove("marked");
+    } else {
+      marked.add(index);
+      cell.classList.add("marked");
+    }
+    document.getElementById("bingo-count").textContent =
+      `${marked.size} / 9 completed`;
+    if (marked.size === 9) {
+      document.getElementById("bingo-count").textContent =
+        "BINGO. You people need supervision. ♡";
+    }
+  };
+  bingoBoard.appendChild(cell);
+});
+
+function resetBingo() {
+  marked.clear();
+  document.querySelectorAll(".bingo-cell").forEach(cell => {
+    cell.classList.remove("marked");
+  });
+  document.getElementById("bingo-count").textContent = "0 / 9 completed";
+}
+
+/* AWARDS */
+
+const awardsGrid = document.getElementById("awards-grid");
+
+awards.forEach(([award, winner]) => {
+  const item = document.createElement("div");
+  item.className = "award";
+  item.innerHTML = `<strong>${award}</strong><span>${winner}</span>`;
+  awardsGrid.appendChild(item);
+});
+
+/* TIME CAPSULE */
+
+function saveCapsule() {
+  const message = document.getElementById("capsule-message").value.trim();
+  if (!message) {
+    document.getElementById("capsule-status").textContent =
+      "You need to write something first, darling.";
+    return;
+  }
+  try {
+    localStorage.setItem("friendshipTimeCapsule", message);
+    document.getElementById("capsule-status").textContent =
+      "Sealed. Your future selves have a letter waiting. ♡";
+  } catch {
+    document.getElementById("capsule-status").textContent =
+      "Your browser couldn't save this message. Copy it somewhere safe!";
+  }
+}
+
+/* REVEAL ON SCROLL */
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: .1 });
+
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+</script>
+</body>
+</html>
